@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Segoe UI';
     background: #0f172a;
     color: white;
     text-align: center;
@@ -16,39 +16,52 @@ body {
 
 header {
     background: linear-gradient(90deg, #2563eb, #9333ea);
-    padding: 20px;
+    padding: 30px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 section {
-    padding: 40px;
+    padding: 50px;
 }
 
 h2 {
     color: #38bdf8;
 }
 
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .images img {
-    width: 200px;
+    width: 220px;
     margin: 10px;
-    border-radius: 12px;
-    transition: 0.3s;
+    border-radius: 15px;
+    transition: 0.4s;
 }
 
 .images img:hover {
     transform: scale(1.1);
 }
 
-video {
+video, audio {
+    margin-top: 20px;
     border-radius: 10px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background: #22c55e;
     border: none;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 footer {
@@ -62,55 +75,64 @@ footer {
 <body>
 
 <header>
-    <h1>Generative AI World</h1>
-    <p>Explore AI Multimedia Technologies</p>
+    <div class="logo">🤖 AI Vision</div>
+    <p>Generative AI & Multimedia Systems</p>
 </header>
 
 <section>
     <h2>What is Generative AI?</h2>
     <p>
-        Generative AI creates images, videos, audio, and text automatically using advanced models.
+        Generative AI is a modern technology that creates images, videos, audio, and text automatically using deep learning models.
     </p>
 </section>
 
 <section class="images">
-    <h2>AI Generated Images</h2>
+    <h2>AI Generated Images (WEBP)</h2>
 
-    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
-    <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714">
-    <img src="https://images.unsplash.com/photo-1674027392880-7519f8cbfbe7">
-    <img src="https://images.unsplash.com/photo-1677442135722-5f3f15c1c44c">
-    <img src="https://images.unsplash.com/photo-1673188787655-2ad6f9c4d8b1">
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?fm=webp&w=500">
+    <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714?fm=webp&w=500">
+    <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?fm=webp&w=500">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?fm=webp&w=500">
+    <img src="https://images.unsplash.com/photo-1526378722484-cc5c510a94b4?fm=webp&w=500">
 
 </section>
 
 <section>
-    <h2>Video Explanation</h2>
+    <h2>AI Video Demo</h2>
     <video width="500" controls>
         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
     </video>
 </section>
 
 <section>
-    <h2>Audio Explanation</h2>
+    <h2>AI Voice Explanation</h2>
     <audio controls>
         <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
     </audio>
 </section>
 
 <section>
-    <h2>Interactive Button</h2>
-    <button onclick="showMessage()">Click Me</button>
-    <p id="msg"></p>
+    <h2>Try AI Interaction</h2>
+    <button onclick="generateAI()">Generate Idea</button>
+    <p id="output"></p>
 </section>
 
 <footer>
-    <p>Created for Multimedia Project</p>
+    <p>Project using AI tools | Multimedia Course</p>
 </footer>
 
 <script>
-function showMessage() {
-    document.getElementById("msg").innerText = "AI is the future of multimedia!";
+function generateAI() {
+    const ideas = [
+        "AI can generate realistic human faces.",
+        "AI can create full movies in the future.",
+        "AI helps designers create images instantly.",
+        "AI can generate music and voices.",
+        "AI improves multimedia systems performance."
+    ];
+
+    const random = ideas[Math.floor(Math.random() * ideas.length)];
+    document.getElementById("output").innerText = random;
 }
 </script>
 
