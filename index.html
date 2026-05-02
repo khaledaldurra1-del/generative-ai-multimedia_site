@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative AI</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(90deg, #2563eb, #9333ea);
+    padding: 20px;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    color: #38bdf8;
+}
+
+.images img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+video {
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #22c55e;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    background: #020617;
+    padding: 20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Generative AI World</h1>
+    <p>Explore AI Multimedia Technologies</p>
+</header>
+
+<section>
+    <h2>What is Generative AI?</h2>
+    <p>
+        Generative AI creates images, videos, audio, and text automatically using advanced models.
+    </p>
+</section>
+
+<section class="images">
+    <h2>AI Generated Images</h2>
+
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995">
+    <img src="https://images.unsplash.com/photo-1682687982501-1e58ab814714">
+    <img src="https://images.unsplash.com/photo-1674027392880-7519f8cbfbe7">
+    <img src="https://images.unsplash.com/photo-1677442135722-5f3f15c1c44c">
+    <img src="https://images.unsplash.com/photo-1673188787655-2ad6f9c4d8b1">
+
+</section>
+
+<section>
+    <h2>Video Explanation</h2>
+    <video width="500" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+</section>
+
+<section>
+    <h2>Audio Explanation</h2>
+    <audio controls>
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<section>
+    <h2>Interactive Button</h2>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="msg"></p>
+</section>
+
+<footer>
+    <p>Created for Multimedia Project</p>
+</footer>
+
+<script>
+function showMessage() {
+    document.getElementById("msg").innerText = "AI is the future of multimedia!";
+}
+</script>
+
+</body>
+</html>
